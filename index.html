@@ -267,22 +267,34 @@ body{background:var(--darker);font-family:'VT323',monospace;color:#fff;overflow:
 /* ══ MOBILE BUTTONS v0.1.6 ══
    Fixed: moved UP so they never get clipped
    Bigger touch targets, cleaner layout          */
-.mobile-btns{
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999999;
-
-  display: flex;
-  gap: 10px;
-
-  pointer-events: auto;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-canvas{
-  position: relative;
-  z-index: 1;
+#game {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 140px);
+}
+
+.mobile-btns {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  z-index: 9999;
 }
 .arrow-btn{
   width:clamp(58px,14vw,86px);height:clamp(58px,14vw,86px);
